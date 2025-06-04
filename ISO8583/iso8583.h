@@ -22,9 +22,10 @@ typedef struct
 } iso8583_Message;
 typedef struct
 {
-    const int Fields_length[16];
+    const int Fields_length[15];
 } iso8583_Field_Length;
 
 void Set_bitmap(unsigned char *bitmap, int field_number);
 int is_Field_Present(const unsigned char bitmap, int field);
+void init_iso8583(iso8583_Message *msg);
 #endif
